@@ -1,6 +1,6 @@
 const { User } = require('../app/models')
 
-exports.register = async (req, res, next) => {
+exports.register = async (req, res) => {
     const { username } = req.body;
     const { password } = req.body;
     if (!username || !password) {
@@ -28,4 +28,10 @@ exports.register = async (req, res, next) => {
 exports.users = async (req, res) => {
     const users = await User.findAll();
     res.send(users);
+}
+
+
+exports.me = async (req, res) => {
+   const me = await User.findByPk(req.userId);
+   res.status(201).json({ data: me});
 }

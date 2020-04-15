@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config({path:'./.env'});
 
 
-exports.auth = async (req, res, next) => {
+exports.auth = async (req, res) => {
     const { username } = req.body;
     const { password } = req.body;
 
