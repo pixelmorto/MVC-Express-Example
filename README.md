@@ -3,5 +3,6 @@
 This is a simple API using MVC 
 
 # Routes
-* ``/users => POST(username, password)`` this register an user
-* ``/users => GET()`` this show all registred users
+* ``/users/register => POST(username, password)`` this register an user
+* ``/users => GET(Requires Authorization from /auth)`` this show all registred users
+* ``/auth => POST(usename, password)`` this return a token(jwt)
