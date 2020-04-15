@@ -1,8 +1,8 @@
 const { User } = require('../app/models')
 
 exports.register = async (req, res, next) => {
-    const { username } = req.body
-    const { password } = req.body
+    const { username } = req.body;
+    const { password } = req.body;
     if (!username || !password) {
         res.status(400).json({
             message: "User Detail Cannot be empty"
@@ -15,11 +15,11 @@ exports.register = async (req, res, next) => {
         });
 
         if (result >= 1) {
-            res.status(406).json({ message: 'User Already Registered'})
+            res.status(406).json({ message: 'User Already Registered'});
         }
         else {
-            User.create({ username: username, password: password })
-            res.status(201).json({ message: 'Successfully Registered' })
+            User.create({ username: username, password: password });
+            res.status(201).json({ message: 'Successfully Registered' });
         }
 
     }
@@ -27,5 +27,5 @@ exports.register = async (req, res, next) => {
 
 exports.users = async (req, res) => {
     const users = await User.findAll();
-    res.send(users)
+    res.send(users);
 }
