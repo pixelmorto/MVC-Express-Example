@@ -1,6 +1,6 @@
 # MVC-Express
 
-This is a simple API using MVC 
+This is a simple API using MVC and JWT
 
 # Routes
 * ``/users/register => POST(username, password)`` this register an user
