@@ -1,7 +1,6 @@
-var express = require('express');
-var app = require('./app')
+let app = require('./app')
+const port = 3000
 
-
-app.listen(3000, function () {
-  console.log('Running at 3000!');
+app.listen(port, function () {
+  console.log(`Running at ${port}!`);
 });
