@@ -3,6 +3,5 @@ module.exports = {
   password: 'root',
   storage: 'db.sqlite',
   host: 'localhost',
-  dialect: 'sqlite',
-
+  dialect: 'sqlite'
 }

@@ -5,5 +5,4 @@ const controller = require('../controllers/authController')
 
 router.post('/', controller.auth)
 
-
 module.exports = router
